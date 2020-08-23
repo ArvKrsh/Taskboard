@@ -1,0 +1,42 @@
+
+* {
+  margin: 5px;
+}
+body {
+  background-color: #e8e8e8
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.card-todo {
+  background-color :#E38627;
+  color: white;
+}
+
+.card-started {
+  background-color: #C13C37;
+  color: white;
+}
+
+.card-completed {
+  background-color: #6A2135;
+  color: white;
+}
+
+.chart-container {
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.list-name {
+  padding-bottom: 30px
+}
+
+.list {
+  padding-top: 30px
+}
