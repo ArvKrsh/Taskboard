@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, FormControl, Card } from 'react-bootstrap';
 import store from '../store'
+import { addStarted, addToDo, addCompleted } from '../actions/tasks-actions'
 
 class Tasks extends React.Component {
 
@@ -13,43 +14,22 @@ class Tasks extends React.Component {
         if (e.key === 'Enter') {
             if (e.target.dataset.name === 'todo') {
                 if (e.target.value) {
-                    store.dispatch(this.addToDo(e.target.value));
+                    store.dispatch(addToDo(e.target.value));
                     e.target.value = ''
                 }
             }
             if (e.target.dataset.name === 'started') {
                 if (e.target.value) {
-                    store.dispatch(this.addStarted(e.target.value));
+                    store.dispatch(addStarted(e.target.value));
                     e.target.value = ''
                 }
             }
             if (e.target.dataset.name === 'completed') {
                 if (e.target.value) {
-                    store.dispatch(this.addCompleted(e.target.value));
+                    store.dispatch(addCompleted(e.target.value));
                     e.target.value = ''
                 }
             }
-        }
-    }
-
-    addToDo(todo) {
-        return {
-            type: 'ADD_TODO',
-            todo: todo
-        }
-    }
-
-    addStarted(started) {
-        return {
-            type: 'ADD_STARTED',
-            started: started
-        }
-    }
-
-    addCompleted(completed) {
-        return {
-            type: 'ADD_COMPLETED',
-            completed: completed
         }
     }
 
